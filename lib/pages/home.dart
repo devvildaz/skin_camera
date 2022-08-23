@@ -9,7 +9,7 @@ import 'package:skin_camera/pages/camera_screen.dart';
 import 'package:image/image.dart' as img;
 import 'package:skin_camera/pages/edit_photo.dart';
 import 'package:http/http.dart' as http;
-
+import 'package:skin_camera/constants/app_urls.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key, required this.title}) : super(key: key);
@@ -109,7 +109,7 @@ class _MyHomeScreenState extends State<HomeScreen> {
                     ),
                     ElevatedButton.icon(
                       onPressed: imageFile != null ? () async {
-                        final uri = Uri.parse('http://192.168.100.30:8000/fast-proxy/');
+                        final uri = Uri.parse(AppUrls.URL_BACKEND);
                         var request = http.MultipartRequest('POST', uri);
                         if(imageFile == null) return;
                         final httpImage = await http.MultipartFile.fromPath('file', imageFile!.path);
