@@ -29,7 +29,7 @@ class MaterialSkinApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Skin Classification',
       theme: ThemeProvider.of(context)?.themeData(Theme.of(context)),
-      home: const HomeScreen(title: 'Skin Classification'),
+      home: const HomeScreen(title: "Skin App"),
     );
   }
 }
