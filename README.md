@@ -18,13 +18,21 @@ A continuacion se presentara detalles sobre el notebook de Jupyter
 </code>
 <code>
   HP_PREPRO = hp.HParam('preprocessing_function', hp.Discrete(['gridmask'])) // posibles opciones 'gridmask' y 'rescale'
+  
   HP_ROTATE = hp.HParam('rotation_range', hp.Discrete([90]))
+  
   HP_WIDTH_SHIFT = hp.HParam('width_shift_range', hp.Discrete([0.15]))
+  
   HP_HEIGHT_SHIFT = hp.HParam('height_shift_range', hp.Discrete([0.15]))
+  
   HP_SHEAR = hp.HParam('shear_range', hp.Discrete([0.5]))
+  
   HP_ZOOM = hp.HParam('zoom_range', hp.Discrete([0.25]))
+  
   HP_HORIZONTAL = hp.HParam('horizontal_flip', hp.Discrete([True]))
+  
   HP_VERTICAL = hp.HParam('vertical_flip', hp.Discrete([True]))
+  
 </code>
 5. Correr todas las celdas del notebook
 6. Se creara nuevas carpetas, las cuales incluye el log para el tensorboard (/logs) y el mejor modelo segun el val_accuracy mayor encontrado durante el periodo de entrenamiento (/models/callback)
